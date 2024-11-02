@@ -12,7 +12,6 @@ function DnD(canvas, interactor) {
 
 	// Developper les 3 fonctions gérant les événements
   this.pression = function(evt){
-    console.log("pression")
     this.pressed=true
     var pos = getMousePosition(canvas,evt)
     this.posinitx = pos.x
@@ -22,7 +21,6 @@ function DnD(canvas, interactor) {
 
   this.deplacement = function(evt){
     if (this.pressed){
-    console.log("deplacement")
     var pos = getMousePosition(canvas,evt)
     this.posfinalx = pos.x
     this.posfinaly = pos.y
@@ -38,7 +36,6 @@ function DnD(canvas, interactor) {
     var pos = getMousePosition(canvas,evt)
     this.posfinalx = pos.x
     this.posfinaly = pos.y
-    console.log("relacher")
     this.pressed = false;
     interactor.onInteractionEnd(this)
     }
