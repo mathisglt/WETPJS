@@ -49,7 +49,6 @@ function Pencil(ctx, drawing, canvas) {
         this.currColour = document.getElementById("colour").value;
         this.currLineWidth = parseInt(document.getElementById("choixTaille").value);
         this.currentShape = new Rectangle();
-        console.log(this.currLineWidth)
     }
 
     this.onInteractionUpdate = function (dnd) {
